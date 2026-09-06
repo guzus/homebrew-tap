@@ -5,21 +5,21 @@
 class Birdy < Formula
   desc "Multi-account X/Twitter CLI with account rotation, in one Go binary"
   homepage "https://github.com/guzus/birdy"
-  version "1.2.0"
+  version "1.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/guzus/birdy/releases/download/v1.2.0/birdy_darwin_amd64.tar.gz"
-      sha256 "a3b16873aba5bd576d6e7b670a613f3a86c76fe168384a471a7016604a0277e6"
+      url "https://github.com/guzus/birdy/releases/download/v1.2.1/birdy_darwin_amd64.tar.gz"
+      sha256 "b6d491ee93a6af1b105f7068562d6f6258bcf89c267b112fdebb6e95b94aadd9"
 
       define_method(:install) do
         bin.install "birdy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/guzus/birdy/releases/download/v1.2.0/birdy_darwin_arm64.tar.gz"
-      sha256 "d920dc782a4ba24761729619b6849120009c958e48b19979c41944ed59bb1c86"
+      url "https://github.com/guzus/birdy/releases/download/v1.2.1/birdy_darwin_arm64.tar.gz"
+      sha256 "6b428040dda2728e7ccf80a33a326d7e3b05a3167bdfef2c2ef98dc977bc65af"
 
       define_method(:install) do
         bin.install "birdy"
@@ -29,15 +29,15 @@ class Birdy < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/guzus/birdy/releases/download/v1.2.0/birdy_linux_amd64.tar.gz"
-      sha256 "e6ba33c9b0934d7d0fe26fd2bca02b25f713614b40770f611e4de6c17b05ba41"
+      url "https://github.com/guzus/birdy/releases/download/v1.2.1/birdy_linux_amd64.tar.gz"
+      sha256 "abc3b49dbf35357bae40eaff268c3e33159dce873f09a7ca864bb5a6f506b15a"
       define_method(:install) do
         bin.install "birdy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/guzus/birdy/releases/download/v1.2.0/birdy_linux_arm64.tar.gz"
-      sha256 "e8a19d16aefc8c83b929ce10d389b0cee93cadc23629f635c695c10a01ec35c9"
+      url "https://github.com/guzus/birdy/releases/download/v1.2.1/birdy_linux_arm64.tar.gz"
+      sha256 "6ee0140cff9925ed880ed2a332741721d6ab1838d51a672a37d938e043b4192d"
       define_method(:install) do
         bin.install "birdy"
       end
